@@ -1,0 +1,36 @@
+{
+  "name": "StretchTimer",
+  "displayName": "Stretch Timer",
+  "description": "A reminder to get up and stretch while you code.",
+  "version": "0.0.1",
+  "publisher": "jpalioto",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.stretchTimer"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.stretchTimer",
+        "title": "Stretch Timer"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  },
+  "dependencies": {
+    "open": "0.0.5"
+  }
+}
