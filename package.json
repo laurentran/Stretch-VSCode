@@ -24,7 +24,9 @@
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "pretest": "tsc",
+    "test": "mocha --ui tdd ./out/test/extension.test.js"
   },
   "devDependencies": {
     "expect": "^1.13.0",
