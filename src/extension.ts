@@ -67,7 +67,7 @@ export function TimerCallback( timer )
 						}
 						else if( b == showCatButtonText ) 
 						{
-							ShowImage( catImageTargetUrl );
+							bll.ShowImage( catImageTargetUrl );
 						}
 					 } );
 		
