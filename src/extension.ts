@@ -6,7 +6,7 @@ import * as bll from './bll';
 // Open will bring up the default browser and navigate to a URI.
 var open = require( "open" );
 
-const timerPeriod = 2000; 					// The peroidicity of the message pop-up in miliseoncds.
+const timerPeriod = 3600000; 					// The peroidicity of the message pop-up in miliseoncds.
 const showMeButtonText = 'Show Me'; 			// This text will be shown on the button that brings up the browser
 const stopButtonText = 'Stop Alerts';			// This text will be on the button that stops the messages from showing.
 const showCatButtonText = 'Show a Cat Instead';
