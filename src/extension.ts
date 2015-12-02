@@ -5,13 +5,13 @@ import * as vscode from 'vscode';
 // Open will bring up the default browser and navigate to a URI.
 var open = require("open");
 
-var timerPeriod = 3600000; 					// The peroidicity of the message pop-up in miliseoncds.
-var showMeButtonText = 'Show Me'; 			// This text will be shown on the button that brings up the browser
-var stopButtonText = 'Stop Alerts';			// This text will be on the button that stops the messages from showing.
+const timerPeriod = 3600000; 					// The peroidicity of the message pop-up in miliseoncds.
+const showMeButtonText = 'Show Me'; 			// This text will be shown on the button that brings up the browser
+const stopButtonText = 'Stop Alerts';			// This text will be on the button that stops the messages from showing.
 
 // This is the URI that we will dipslay.  The intent is to show types of stretches to do {
 // TODO: Move this image to somewhere that I own.
-var imageTargetUrl = 'http://bit.ly/1TsGOW5';
+const imageTargetUrl = 'http://bit.ly/1TsGOW5';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 // This method gets called when the timer goes off
 // It sets up the information message and displays it.
-function TimerCallback( timer )
+export function TimerCallback( timer )
 {
 	// Display a information message.
 	vscode.window.showInformationMessage(GetAlertText(), 
@@ -67,7 +67,7 @@ function TimerCallback( timer )
 
 // This is the message that we show ever X seconds.  
 // TODO: Internationalize
-function GetAlertText()
+export function GetAlertText()
 {
 	// The period is in seconds.  We want minutes;
 	var minutes = ToNearestMinute(timerPeriod);
@@ -75,18 +75,18 @@ function GetAlertText()
 }
 
 // Call this function when you want to stop a timer.
-function StopTimer( timer )
+export function StopTimer( timer )
 {
 	clearInterval(timer);
 }
 
 // Bring up the browser to the target URL.
-function ShowImage( targetUrl )
+export function ShowImage( targetUrl )
 {
 	open(targetUrl);
 }
 
-function ToNearestMinute( miliseconds )
+export function ToNearestMinute( miliseconds )
 {
 	return Math.trunc( miliseconds/1000/60 );
 }
