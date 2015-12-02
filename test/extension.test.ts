@@ -11,7 +11,7 @@ import * as bll from '../src/bll';
 // as well as import your extension to test it
 import * as vscode from 'vscode';
 import * as myExtension from '../src/extension';
-import expect = require('expect')
+//import expect = require('expect')
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite("Business Logic Tests", () => {
@@ -22,9 +22,9 @@ suite("Business Logic Tests", () => {
 		expect( () => { bll.ToNearestMinute(-1); } ).toThrow( 'Invalid Argument less than 0 sent to ToNearestMinute' ); 
 	});	
 
-	test("GetAlertText Test", () => {
-		var expected = 'You have been inactive for 0 minutes. Time to stretch!';
-		var result = myExtension.GetAlertText();
-		assert.equal(expected, result);
-	});
+//	test("GetAlertText Test", () => {
+//		var expected = 'You have been inactive for 0 minutes. Time to stretch!';
+//		var result = myExtension.GetAlertText();
+//		assert.equal(expected, result);
+//	});
 });
