@@ -11,6 +11,7 @@ import * as bll from '../src/bll';
 // as well as import your extension to test it
 import * as vscode from 'vscode';
 import * as myExtension from '../src/extension';
+
 var expect = require('expect');
 
 // Defines a Mocha test suite to group tests of similar kind together
