@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 // Open will bring up the default browser and navigate to a URI.
 var open = require("open");
 
-var timerPeriod = 2000; 					// The peroidicity of the message pop-up in miliseoncds.
+var timerPeriod = 3600000; 					// The peroidicity of the message pop-up in miliseoncds.
 var showMeButtonText = 'Show Me'; 			// This text will be shown on the button that brings up the browser
 var stopButtonText = 'Stop Alerts';			// This text will be on the button that stops the messages from showing.
 

@@ -1,2 +1,2 @@
 # README
-## This is a work in progress!
+## This VS Code exteion will remind you to stand up and stretch ever hour.
