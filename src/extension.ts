@@ -9,10 +9,12 @@ var open = require( "open" );
 const timerPeriod = 2000; 					// The peroidicity of the message pop-up in miliseoncds.
 const showMeButtonText = 'Show Me'; 			// This text will be shown on the button that brings up the browser
 const stopButtonText = 'Stop Alerts';			// This text will be on the button that stops the messages from showing.
+const showCatButtonText = 'Show a Cat Instead';
 
 // This is the URI that we will dipslay.  The intent is to show types of stretches to do {
 // TODO: Move this image to somewhere that I own.
 const imageTargetUrl = 'http://bit.ly/1TsGOW5';
+const catImageTargetUrl = 'http://thecatapi.com/api/images/get?format=src&type=gif'
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -47,7 +49,8 @@ export function TimerCallback( timer )
 	// Display a information message.
 	vscode.window.showInformationMessage( bll.GetAlertText( timerPeriod ), 
 										stopButtonText,
-										showMeButtonText )
+										showCatButtonText,
+										showMeButtonText)					
 		.then( (b)=> {
 						// This is the close button ugh.
 						if( typeof b == 'undefined' )
@@ -61,6 +64,10 @@ export function TimerCallback( timer )
 						else if( b == stopButtonText )
 						{
 							bll.StopTimer( timer );	
+						}
+						else if( b == showCatButtonText ) 
+						{
+							ShowImage( catImageTargetUrl );
 						}
 					 } );
 		
