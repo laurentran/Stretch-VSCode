@@ -24,7 +24,7 @@ suite("Business Logic Tests", () => {
 
 	test("GetAlertText Test", () => {
 		var expected = 'You have been inactive for 0 minutes. Time to stretch!';
-		var result = myExtension.GetAlertText();
+		var result = bll.GetAlertText( 0 );
 		assert.equal(expected, result);
 	});
 });
